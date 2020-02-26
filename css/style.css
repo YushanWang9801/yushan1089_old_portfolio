@@ -1897,3 +1897,7 @@ form label {
   max-height: 100%;
 }
 /*# sourceMappingURL=style.css.map */
+/* Cursor */
+.txt-type > .txt {
+  border-right: 0.2rem solid #777;
+}
