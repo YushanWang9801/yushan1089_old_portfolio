@@ -360,7 +360,61 @@ class TypeWriter {
 
 
 // Init On DOM Load
-document.addEventListener('DOMContentLoaded', init);
+//document.addEventListener('DOMContentLoaded', init);
+
+document.addEventListener("DOMContentLoaded", function() {
+	fields.name = document.getElementById('Name');
+	fields.email = document.getElementById('email');
+	fields.subject = document.getElementById('subject');
+	fields.message = document.getElementById('message');
+})
+
+function isNotEmpty(value) {
+	if (value == null || typeof value == 'undefined' ) return false;
+	return (value.length > 0);
+}
+
+function isEmail(email){
+	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(String(email).toLowerCase());
+}
+
+function fieldValidation(field, validationFunction) {
+	if (field == null) return false;
+
+	let isFieldValid = validationFunction(field.value)
+	if (!isFieldValid) {
+		field.className = 'placeholderRed';
+	} else {
+		field.className = '';
+	}
+
+	return isFieldValid;
+}
+
+function isValid() {
+	var valid = true;
+
+	valid &= fieldValidation(fields.name, isNotEmpty);
+	valid &= fieldValidation(fields.email, isEmail);
+	valid &= fieldValidation(fields.subject, isNotEmpty);
+	valid &= fieldValidation(fields.message, isNotEmpty);
+	return valid;
+}
+
+$(document).ready(function (){
+	$('.submit').click(function (event){
+		var statusElm = $('.status')
+		statusElm.empty()
+		if(isValid){
+			statusElm.append('<div>Thanks for your message </div>')
+			statusElm.append('<div>I will be in touch shortly </div>')
+		} else{
+			statusElm.append('<div>Ops, Some of your input might not valid </div>')
+			statusElm.append('<div>please try again </div>')
+		}
+	})
+})
 
 // Init App
 function init() {
