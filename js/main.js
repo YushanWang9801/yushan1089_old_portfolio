@@ -406,7 +406,9 @@ $(document).ready(function (){
 	$('.submit').click(function (event){
 		var statusElm = $('.status')
 		statusElm.empty()
+		console.log("Empty")
 		if(isValid){
+			console.log('sent')
 			statusElm.append('<div>Thanks for your message </div>')
 			statusElm.append('<div>I will be in touch shortly </div>')
 		} else{
