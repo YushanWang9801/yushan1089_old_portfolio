@@ -129,16 +129,16 @@
                     <h2> DATASET </h2>
                     <div class="col-md-12"><img src="images/mach/data.png" alt="Image" class="img-responsive" ></div>
                     <p>
-                    I compare the six classiﬁers on 4 two-class classiﬁcation problems. EX2 is from Kaggle,BANKNOTE and
-                    SKIN are from Machine Learning Repository of University of California, Irvine, and MAGIC is from
-                    Epistasis Lab at UPenn.<br>
-                    For the targeted class of MAGIC, I converted the letter form to number by setting letter ”g” to -1
-                    and else to +1.<br>
-                    For the data preparation of data, except EX2, the rest of three data sets contains multi-features.
-                    I wished to do a 2-D features. Then I perform the PCA(Principal Component Analysis) to the three
-                    datasets. PCA is useful for eliminating dimensions,we took the ﬁrst and second principal component
-                    values for columns for prediction.<br>
-                    For each data we would use three different partitions to divide the training sets and test sets.
+                        I compare the six classiﬁers on 4 two-class classiﬁcation problems. EX2 is from Kaggle,BANKNOTE and
+                        SKIN are from Machine Learning Repository of University of California, Irvine, and MAGIC is from
+                        Epistasis Lab at UPenn.<br>
+                        For the targeted class of MAGIC, I converted the letter form to number by setting letter ”g” to -1
+                        and else to +1.<br>
+                        For the data preparation of data, except EX2, the rest of three data sets contains multi-features.
+                        I wished to do a 2-D features. Then I perform the PCA(Principal Component Analysis) to the three
+                        datasets. PCA is useful for eliminating dimensions,we took the ﬁrst and second principal component
+                        values for columns for prediction.<br>
+                        For each data we would use three different partitions to divide the training sets and test sets.
                         The partitions are set to : 20/80, 50/50, 80/20.<br></p>
                     <h2> EXPERIMENT </h2>
                     <h3> Logistic Regression </h3>
@@ -147,7 +147,7 @@
                     <div class="col-md-12"><img src="images/mach/LR.png" alt="Image" class="img-responsive" ></div>
                     <h3> Support Vector Machine </h3>
                     <p>We use the nonlinear kernels with different pairs of cost of mis-classiﬁcation and parameter of a
-                    Gaussian Kernel. We pick ﬁve values from (10,-1) to (10,3) for C (cost of misclassiﬁcation)and Gamma
+                        Gaussian Kernel. We pick ﬁve values from (10,-1) to (10,3) for C (cost of misclassiﬁcation)and Gamma
                         (parameter of Gaussian Kernel)from list of[1e-6,1e-5,1e-4,1e-3, 1e-2]</p>
                     <div class="col-md-12"><img src="images/mach/SVM.png" alt="Image" class="img-responsive" ></div>
                     <h3> K- Nearest Neighbor</h3>
@@ -155,9 +155,9 @@
                     </p>
                     <div class="col-md-12"><img src="images/mach/KNN.png" alt="Image" class="img-responsive" ></div>
                     <h2> PERFORMANCE </h2>
-                        <div class="col-md-12"><img src="images/mach/3.png" alt="Image" class="img-responsive" ></div>
-                        <div class="col-md-12"><img src="images/mach/ex2.png" alt="Image" class="img-responsive" ></div>
-                        <div class="col-md-12"><img src="images/mach/bank.png" alt="Image" class="img-responsive" ></div>
+                    <div class="col-md-12"><img src="images/mach/3.png" alt="Image" class="img-responsive" ></div>
+                    <div class="col-md-12"><img src="images/mach/ex2.png" alt="Image" class="img-responsive" ></div>
+                    <div class="col-md-12"><img src="images/mach/bank.png" alt="Image" class="img-responsive" ></div>
                     <h2>CONCLUSION</h2>
                     <p>
                         Decision tree and KNN by using the sklearn module perform all quite well on each data-sets,
