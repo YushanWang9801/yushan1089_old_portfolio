@@ -88,7 +88,7 @@
         </div>
     </nav>
 
-    <header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(images/mach/machbg.png); background-size:cover">
+    <header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(images/face%20Mask/copr.gif); background-size:cover">
         <div class="overlay"></div>
         <div class="gtco-container">
             <div class="row">
@@ -96,7 +96,7 @@
                     <div class="row row-mt-15em">
 
                         <div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
-                            <h1>An Empirical Comparision to Supervised Learning Algorithms</h1>
+                            <h1>Face Mask Detector</h1>
                         </div>
                     </div>
                 </div>
@@ -110,70 +110,82 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
                     <h2>ABSTRACT</h2>
-                    <p>It presents a ranking of four supervised learning methods: SVMs, Logistic Regression,
-                        Decision Tree, KNN, Gaussian Naive Bayes, bagging classifier. The experiment uses
-                        four data sets with different magnitudes as a variety of performance criteria to
-                        evaluate the six learning methods</P>
-                    <h2>INTRODUCTION</h2>
-                    <p>The past of the few weeks in the lectures of COGS 118A, I have been studying 2-class classiﬁcation
-                        problem. The project is a rough reproduction to the Empirical Comparison of Supervised Learning
-                        Algorithms created by Rich Caruana and Alexandru Niculescu-Mizil.
-                        This project adopts 6 classiﬁers and 4 datasets with each has distinct size. This project presents
-                        the empirical comparison for six classiﬁers using two performance criteria. The project evaluates
-                        the performance of Logistic Regression, Decision Tree, SVM, KNN, Naive Bayes, bagging classiﬁers
-                        on four binary classiﬁcation problems, using two performance metrics: accuracy and F-score.
-                        Moreover,a precious experience learned from the study this project is based on,For most of the
-                        algorithms, we examine the variations and thoroughly explore the space of the parameters.
-                        For example, we compare, KNN with a great range of values of k, SVMs for different kernels, etc.
+                    <p>Due to the outbreak of COVID-19 in early 2020, the governments around the world have required
+                        their citizenstowearfacemaskswhensocialcontactwithother people are unavoidable during outdoor
+                        activities. This serves both as a protection to the health of people and as a prevention of
+                        further spread of the disease. As we have learned from COGS 181, Convolution Neural Networks has
+                        achieved great success in image recognition and processing, and in this paper, we used CNN as a
+                        binary classiﬁer to classify whether people wear face masks or not in photos and videos. There
+                        are two different datasets and two different CNN designs used. We use the best training model as
+                        the prediction model to develop a program that allows the camera to capture the faces of
+                        individuals and identify whether they are wearing face masks or not. </p>
+                    <br>
+                    <h2>BACKGROUND</h2>
+                    <p>In order to effectively prevent the spread of COVID-19 virus, almost every market and store requires
+                    their customers to wear a mask before entering during the coronavirus pandemic. However, the staffs
+                    are manually scrutinizing whether customers are wearing face covering or not. This process has low
+                    security and safety to both the customers and the working staff. At present, most stores and markets
+                    have installed security camera, and the video is live-streamed. If we could develop a program by
+                    deploying artiﬁcial intelligence to check whether customers are wearing face coverings are not
+                    through the video, then the efﬁciency and safety could be greatly improved.</p>
+                    <br>
+                    <div class ="row">
+                        <div class="col-md-6  text-justify gtco-heading animate-box">
+                            <h2>Project Overview</h2>
+                            <h3>Model for face detection</h3>
+                            <h3>Model for mask or not mask prediction</h3>
+                        </div>
+                        <div class="col-md-6 text-justify gtco-heading animate-box">
+                            <img src="images\face%20Mask\flow chart.png" width=400>
+                        </div>
+                    </div>
+                    <br>
+                    <h2>Face Detection</h2>
+                    <h3>Caffe DNN</h3>
+                    <img src="images/face%20Mask/caffe-dnn.png" width=800>
+                    <br>
+                    <br>
+                    <br>
+                    <h2>Face Mask Classifier</h2>
+                    <h3> VGG -16 Model</h3>
+                    <h3> Model Overview</h3>
+                    <img src="images/face%20Mask/VGG16.png" width=800>
+                    <br>
+                    <h2> Design and Training Model</h2>
+                    <img src="images/face%20Mask/train.png" width=800>
+                    <br>
+                    <br>
+                    <h2> Model Testing</h2>
+                    <img src="images/face%20Mask/test.png" width=800>
+                    <br>
+                    <br>
+                    <h2> Application Status</h2>
+                    <p>The current model is tested successfully through webcam phases. The live-stream requirement has
+                        been satisﬁed. However, we were not certainly about the result for this model to apply to
+                        monitor camera. The CCTV footage might have lower resolution to individual face images. Also,
+                        there are certainly will be multiple individual human beings would appear in the image. The
+                        rectangles which contain each face might have overlapping. The result might yield to higher
+                        error rate. Those still need to be tested. Even though, we have already tested when there are
+                        more than one face in the video, the model could successfully predict the mask and no mask
+                        situation but the accuracy was slightly decreased compared to only one tester in the frame.
                     </p>
-                    <h2> DATASET </h2>
-                    <div class="col-md-12"><img src="images/mach/data.png" alt="Image" class="img-responsive" ></div>
-                    <p>
-                        I compare the six classiﬁers on 4 two-class classiﬁcation problems. EX2 is from Kaggle,BANKNOTE and
-                        SKIN are from Machine Learning Repository of University of California, Irvine, and MAGIC is from
-                        Epistasis Lab at UPenn.<br>
-                        For the targeted class of MAGIC, I converted the letter form to number by setting letter ”g” to -1
-                        and else to +1.<br>
-                        For the data preparation of data, except EX2, the rest of three data sets contains multi-features.
-                        I wished to do a 2-D features. Then I perform the PCA(Principal Component Analysis) to the three
-                        datasets. PCA is useful for eliminating dimensions,we took the ﬁrst and second principal component
-                        values for columns for prediction.<br>
-                        For each data we would use three different partitions to divide the training sets and test sets.
-                        The partitions are set to : 20/80, 50/50, 80/20.<br></p>
-                    <h2> EXPERIMENT </h2>
-                    <h3> Logistic Regression </h3>
-                    <p>Logistic regression is a statistical model that in its basic form uses a logistic function to
-                        model a binary dependent variable, although many more complex extensions exist.</p>
-                    <div class="col-md-12"><img src="images/mach/LR.png" alt="Image" class="img-responsive" ></div>
-                    <h3> Support Vector Machine </h3>
-                    <p>We use the nonlinear kernels with different pairs of cost of mis-classiﬁcation and parameter of a
-                        Gaussian Kernel. We pick ﬁve values from (10,-1) to (10,3) for C (cost of misclassiﬁcation)and Gamma
-                        (parameter of Gaussian Kernel)from list of[1e-6,1e-5,1e-4,1e-3, 1e-2]</p>
-                    <div class="col-md-12"><img src="images/mach/SVM.png" alt="Image" class="img-responsive" ></div>
-                    <h3> K- Nearest Neighbor</h3>
-                    <p> We use 8 of K ranging from K=1 to K =—train set— and choose the optimized one.
-                    </p>
-                    <div class="col-md-12"><img src="images/mach/KNN.png" alt="Image" class="img-responsive" ></div>
-                    <h2> PERFORMANCE </h2>
-                    <div class="col-md-12"><img src="images/mach/3.png" alt="Image" class="img-responsive" ></div>
-                    <div class="col-md-12"><img src="images/mach/ex2.png" alt="Image" class="img-responsive" ></div>
-                    <div class="col-md-12"><img src="images/mach/bank.png" alt="Image" class="img-responsive" ></div>
-                    <h2>CONCLUSION</h2>
-                    <p>
-                        Decision tree and KNN by using the sklearn module perform all quite well on each data-sets,
-                        even with overlapping data(ex: data3) and relative unbalanced data(ex: data 4). The bagging
-                        classiﬁer and SVM classiﬁer performed relatively well on each dataset. Moreover,the logistic
-                        regression classiﬁer and Gaussian naive Bayes classiﬁer are performed not so well.
-                        <br>
-                        The SVM classiﬁer should have better results if more parameters could be experimented.
-                        However,the rbf kernel is the better one over the rest. It does slightly not match with the
-                        study results performed by Rich Caruana and Alexandru Niculescu-Mizil. The reason for this
-                        difference is that, the SVM the study applied to has calibration on the classiﬁer. The
-                        calibration has many ways to apply to the classiﬁer and greatly depend on the data sets.
-                        The calibration knowledge might beyond my current capability so far.
 
-                    </p>
                 </div>
+                <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+                    <div class = row>
+                        <div class="col-md-6  text-justify gtco-heading animate-box">
+                        <span class="btn btn-primary"
+                              onclick="window.location='file/181.pdf'">FULL REPORT OF THE PROJECT</span>
+                        </div>
+                        <div class="col-md-6  text-justify gtco-heading animate-box">
+                            <span class="btn btn-primary"
+                                  onclick="window.location='file/181.pptx'">FULL PROJECT PRESENTATION</span>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
                 <div class="col-md-10 col-md-offset-1 text-center gtco-heading animate-box">
                         <span class="btn btn-primary"
                               onclick="window.location='projects.html'">Back to Projects</span>
