@@ -113,12 +113,15 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
                     <h1>Let's play the Game 2048</h1>
+                    <h3>Join the numbers and get to the 2048 tile!</h3>
                     <br>
                     <br>
 
                     <div class="col-md-10 col-md-offset-1 text-center gtco-heading animate-box">
                         <span class="btn btn-primary"
                             onclick="window.location='javascript:newgame()'" id="newGameButton">New Game</span>
+                        <span class="btn btn-primary"
+                              onclick="window.location='javascript:newgame()'" id="aiGame">Let the AI play</span>
                         <br>
                         <br>
                         <p>Score: <span id="score">0</span> </p>
@@ -166,9 +169,22 @@
                         <div class="number-cell" id="number-cell-3-3" style="width: 0px; height: 0px; top: 430px; left: 430px"></div>
                         -->
                     </div>
-                    <div class="tile-container">
 
-                    </div>
+                    <p class="game-explanation">
+                        <strong class="important">How to play:</strong> Use your <strong>"A","W","S","D" as arrow keys</strong> to move the tiles. <br>
+                        When two tiles with the same number touch, they <strong>merge into one!</strong> <br>
+                        <br>
+                        <br>
+                        <strong class="important">Let the AI play:</strong> Click let the AI play, it would automatically play the game and normally
+                        end the game after getting 1024.<br>
+                    </p>
+                    <br>
+                    <p class="game-explanation text-center">
+                        <strong class="important">A : move LEFT</strong><br>
+                        <strong class="important">W : move UP</strong><br>
+                        <strong class="important">S : move DOWN</strong><br>
+                        <strong class="important">D : move RIGHT</strong><br>
+                    </p>
                 </div>
             </div>
         </div>
