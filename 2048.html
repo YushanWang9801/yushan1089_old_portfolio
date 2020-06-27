@@ -44,6 +44,9 @@
     <!-- Theme style  -->
     <link rel="stylesheet" href="css/style.css">
 
+    <! -- 2048 Style -->
+    <link rel="stylesheet" href="css/2048style.css">
+
     <!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
     <!-- FOR IE9 below -->
@@ -81,13 +84,14 @@
                         </li>
                         <li><a href="photos.html">Photos</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
             </div>
 
         </div>
     </nav>
 
-    <header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(images/projects/bg.jpg)">
+    <header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(images/2048/copr.gif); background-size:cover">
         <div class="overlay"></div>
         <div class="gtco-container">
             <div class="row">
@@ -95,8 +99,7 @@
                     <div class="row row-mt-15em">
 
                         <div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
-                            <h1>Welcome to My PROJECTS' collection</h1>
-                            <h2> Here are TECHNICAL and FUN projects</h2>
+                            <h1>AI 2048</h1>
                         </div>
                     </div>
                 </div>
@@ -109,99 +112,63 @@
         <div class="gtco-container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-                    <h1>Technical Projects</h1>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 animate-box">
-                        <p><a onclick="window.location='face.html'">
-                            <img src="images/face%20Mask/copr.gif" class="img-responsive" width=600>
-                        </a></p>
-                    </div>
-                    <div class="col-lg-6 col-md-6  animate-box text-left">
-                        <h1>Face Mask Detector</h1>
-                        <h3>Deep Learning</h3><br>
-                        <p_large>Using Caffe-DNN for face detection technology<br>
-                            And VGG-16 model for the training on mask/no_mask classifier and<br>
-                            OpenCV for live-streaming detector
-                        </p_large>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 animate-box">
-                        <p><a onclick="window.location='mach.html'">
-                            <img src="images/mach/mach.png" class="img-responsive">
-                        </a></p>
-                    </div>
-                    <div class="col-lg-6 col-md-6  animate-box text-left">
-                        <h1>Empirical Comparison to ML Algoritms</h1>
-                        <h3>Supervised Learnings</h3><br>
-                        <p_large>Based on the study by Caruana, Rich. and Niculescu-Mizil, Alexandru,
-                            <br>I developed an empirical study on supervised learning algorithms
-                        </p_large>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 animate-box">
-                        <p><a onclick="window.location='2048.html'">
-                            <img src="images/2048/copr.gif" class="img-responsive" width=600>
-                        </a></p>
-                    </div>
-                    <div class="col-lg-6 col-md-6  animate-box text-left">
-                        <h1>AI 2048</h1>
-                        <h3>Minmax for auto 2048 </h3><br>
-                        <p_large>
-                        </p_large>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 animate-box">
-                        <p><a onclick="window.location='dsc.html'">
-                            <img src="images/dsc/topic%20photo.jpg" class="img-responsive">
-                        </a></p>
-                    </div>
-                    <div class="col-lg-6 col-md-6  animate-box text-left">
-                        <h1>How to survive University</h1>
-                        <h3>Intro to Data Science Analysis</h3><br>
-                        <p_large>According to the College Scorecard Data provided
-                            by the U.S. Department of Education<br>
-                            I generate a successful application guide from analyzing the College
-                            Scorecard. <br>
-                        </p_large>
-                    </div>
-                </div>
-                <div class="row">
-                <div class="col-lg-6 col-md-6 animate-box">
-                    <p><a onclick="window.location='FIS.html'">
-                        <img src="images/FIS/WF_car1.JPG" class="img-responsive">
-                    </a></p>
-                </div>
-                <div class="col-lg-6 col-md-6  animate-box text-left">
-                    <h1>Formula 1 In Schools</h1>
-                    <h3> LeSports Chequered Flag Racing</h3><br>
-                    <p_large> Formula 1 In Schools is an international STEM competition.<br>
-                        I and my team designed a race car with aerodynamic modeling<br>
-                        I won the 8th place in the World Final 2016, in Austin</p_large>
-                </div>
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-                    <h1>"FUN" Projects</h1>
-                </div>
-                <div class="col-lg-6 col-md-6 animate-box">
-                    <p><a onclick="window.location='bar.html'">
-                        <img src="images/projects/bar.jpg" class="img-responsive">
-                    </a></p>
-                </div>
-                <div class="col-lg-6 col-md-6  animate-box text-justify">
-                    <h1>YUSHAN's BAR</h1>
+                    <h1>Let's play the Game 2048</h1>
                     <br>
-                    <p_large>Drink mixing always could be an improvising job, but to create a personal cocktail
-                            with fabulous look, takes time and also tasting.<br>
-                            I designed several cocktails with my originality and also
-                            reproduced some of the most classic cocktails of all time</p_large>
+                    <br>
+
+                    <div class="col-md-10 col-md-offset-1 text-center gtco-heading animate-box">
+                        <span class="btn btn-primary"
+                            onclick="window.location='javascript:newgame()'" id="newGameButton">New Game</span>
+                        <br>
+                        <br>
+                        <p>Score: <span id="score">0</span> </p>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <! -- here comes the grid -->
+                    <div id="grid-container">
+                        <div class="grid-cell" id="grid-0-0"></div>
+                        <div class="grid-cell" id="grid-0-1"></div>
+                        <div class="grid-cell" id="grid-0-2"></div>
+                        <div class="grid-cell" id="grid-0-3"></div>
+
+                        <div class="grid-cell" id="grid-1-0"></div>
+                        <div class="grid-cell" id="grid-1-1"></div>
+                        <div class="grid-cell" id="grid-1-2"></div>
+                        <div class="grid-cell" id="grid-1-3"></div>
+
+                        <div class="grid-cell" id="grid-2-0"></div>
+                        <div class="grid-cell" id="grid-2-1"></div>
+                        <div class="grid-cell" id="grid-2-2"></div>
+                        <div class="grid-cell" id="grid-2-3"></div>
+
+                        <div class="grid-cell" id="grid-3-0"></div>
+                        <div class="grid-cell" id="grid-3-1"></div>
+                        <div class="grid-cell" id="grid-3-2"></div>
+                        <div class="grid-cell" id="grid-3-3"></div>
+                        <!--
+                        <div class="number-cell" id="number-cell-0-0" style="width: 0px; height: 0px; top: 70px; left: 70px"></div>
+                        <div class="number-cell" id="number-cell-0-1" style="width: 0px; height: 0px; top: 70px; left: 190px"></div>
+                        <div class="number-cell" id="number-cell-0-2" style="width: 0px; height: 0px; top: 70px; left: 310px"></div>
+                        <div class="number-cell" id="number-cell-0-3" style="width: 0px; height: 0px; top: 70px; left: 430px"></div>
+                        <div class="number-cell" id="number-cell-1-0" style="width: 0px; height: 0px; top: 190px; left: 70px"></div>
+                        <div class="number-cell" id="number-cell-1-1" style="width: 0px; height: 0px; top: 190px; left: 190px"></div>
+                        <div class="number-cell" id="number-cell-1-2" style="width: 0px; height: 0px; top: 190px; left: 310px"></div>
+                        <div class="number-cell" id="number-cell-1-3" style="width: 0px; height: 0px; top: 190px; left: 430px"></div>
+                        <div class="number-cell" id="number-cell-2-0" style="width: 0px; height: 0px; top: 310px; left: 70px"></div>
+                        <div class="number-cell" id="number-cell-2-1" style="width: 0px; height: 0px; top: 310px; left: 190px"></div>
+                        <div class="number-cell" id="number-cell-2-2" style="width: 0px; height: 0px; top: 310px; left: 310px"></div>
+                        <div class="number-cell" id="number-cell-2-3" style="width: 0px; height: 0px; top: 310px; left: 430px"></div>
+                        <div class="number-cell" id="number-cell-3-0" style="width: 0px; height: 0px; top: 430px; left: 70px"></div>
+                        <div class="number-cell" id="number-cell-3-1" style="width: 0px; height: 0px; top: 430px; left: 190px"></div>
+                        <div class="number-cell" id="number-cell-3-2" style="width: 0px; height: 0px; top: 430px; left: 310px"></div>
+                        <div class="number-cell" id="number-cell-3-3" style="width: 0px; height: 0px; top: 430px; left: 430px"></div>
+                        -->
+                    </div>
+                    <div class="tile-container">
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -296,6 +263,11 @@
 
 <!-- Main -->
 <script src="js/main.js"></script>
+
+
+<!-- import 2048 js file -->
+<script type="text/javascript" src="js/support.js"></script>
+<script type="text/javascript" src="js/game_manager.js"></script>
 
 </body>
 </html>

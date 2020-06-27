@@ -283,8 +283,6 @@
 
 		});
 	};
-
-
 	
 	$(function(){
 		mobileMenuOutsideClick();
@@ -299,11 +297,14 @@
 		counterWayPoint();
 		dateForm();
 		parallax();
+		//newgame(); //2048
+		//prepareForMobile(); //2048
 	});
 
 
 }());
 
+// this is the code for the main page animation
 class TypeWriter {
 	constructor(txtElement, words, wait = 200) {
 		this.txtElement = txtElement;
@@ -359,6 +360,8 @@ class TypeWriter {
 }
 
 
+
+// This is the code for contact page
 // Init On DOM Load
 document.addEventListener('DOMContentLoaded', init);
 
@@ -425,4 +428,120 @@ function init() {
 	const wait = txtElement.getAttribute('data-wait');
 	// Init TypeWriter
 	new TypeWriter(txtElement, words, wait);
+}
+
+
+// Code for 2048
+// add one line in the main function newgame
+var gameBoard =  Array();
+
+var score = 0;
+var hasConflicted = new Array();
+var startx = 0;
+var starty = 0;
+var endx = 0;
+var endy = 0;
+
+$(document).ready(function(){
+	//prepareForMobile();
+	newgame();
+});
+
+function prepareForMobile(){
+
+	 if( documentWidth > 500 ){
+	 		gridContainerWidth = 500;
+	 		cellSpace = 20;
+	 		cellSideLength = 100;
+	 }
+
+	 $('#grid-container').css('width',gridContainerWidth - 2*cellSpace);
+	 $('#grid-container').css('height',gridContainerWidth - 2*cellSpace);
+	 $('#grid-container').css('padding', cellSpace);
+	 $('#grid-container').css('border-radius',0.02*gridContainerWidth);
+
+	 $('.grid-cell').css('width',cellSideLength);
+	 $('.grid-cell').css('height',cellSideLength);
+	 $('.grid-cell').css('border-radius',0.02*cellSideLength);
+}
+
+function newgame(){
+	gameInit();
+	generateOneNum();
+	generateOneNum();
+}
+
+function gameInit(){
+	for(var i=0; i<4; i++){
+		gameBoard[i] = new Array();
+		hasConflicted[i] = new Array();
+		for(var j=0; j<4; j++){
+			gameBoard[i][j] = 0;
+			hasConflicted[i][j] = false;
+			var gridCell = $("#grid-"+i+"-"+j);
+			gridCell.css("top", getPosTop(i,j));
+			gridCell.css("left", getPosLeft(i,j));
+		}
+
+	}
+	updateGameView();
+
+	score = 0;
+	$('#score').text( score );
+}
+
+function updateGameView(){
+	$(".number-cell").remove();
+	for(var i=0; i<4; i++) {
+		for (var j = 0; j < 4; j++) {
+			$("#grid-container").append( '<div class="number-cell" id="number-cell-'+i+'-'+j+'"></div>' );
+			var numberCell = $("#number-cell-"+i+"-"+j);
+
+			if(gameBoard[i][j] == 0){
+				numberCell.css("width", "0px");
+				numberCell.css("height", "0px");
+				numberCell.css("top", getPosTop(i,j) +  50);
+				numberCell.css("left", getPosLeft(i,j)+ 50);
+			} else{
+				numberCell.css("width", "100px");
+				numberCell.css("height", "100px");
+				numberCell.css("top", getPosTop(i,j));
+				numberCell.css("left", getPosLeft(i,j));
+				numberCell.css("background-color", getNumBGCol(gameBoard[i][j]));
+				numberCell.css("color",getNumCol(gameBoard[i][j]));
+				numberCell.text(gameBoard[i][j]);
+			}
+
+			hasConflicted[i][j] = false;
+		}
+	}
+
+	$('.number-cell').css('line-height', 100+'px');
+	$('.number-cell').css('font-size', 50+'px');
+}
+
+function generateOneNum(){
+	if(nospace(gameBoard)){
+		return false;
+	}
+
+	var randX = parseInt(Math.floor(Math.random()*4));
+	var randY = parseInt(Math.floor(Math.random()*4));
+	while(true){
+		if(gameBoard[randX][randY] == 0){
+			break;
+		}
+		else {
+			randX = parseInt(Math.floor(Math.random() * 4));
+			randY = parseInt(Math.floor(Math.random() * 4));
+		}
+	}
+
+	var randNumber = Math.random() <0.5 ? 2 : 4;
+
+	gameBoard[randX][randY] = randNumber;
+
+	showNum(randX, randY, randNumber);
+
+	return true;
 }
