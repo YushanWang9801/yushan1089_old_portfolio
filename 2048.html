@@ -45,7 +45,8 @@
     <link rel="stylesheet" href="css/style.css">
 
     <! -- 2048 Style -->
-    <link rel="stylesheet" href="css/2048style.css">
+    <link href="css/2048/main.css" rel="stylesheet" type="text/css">
+
 
     <!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
@@ -106,79 +107,91 @@
             </div>
         </div>
     </header>
-
-
     <div class="gtco-section">
         <div class="gtco-container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
                     <h1>Let's play the Game 2048</h1>
                     <h3>Join the numbers and get to the 2048 tile!</h3>
-                    <br>
-                    <br>
-
-                    <div class="col-md-10 col-md-offset-1 text-center gtco-heading animate-box">
-                        <span class="btn btn-primary"
-                            onclick="window.location='javascript:newgame()'" id="newGameButton">New Game</span>
-                        <span class="btn btn-primary"
-                              onclick="window.location='javascript:newgame()'" id="aiGame">Let the AI play</span>
-                        <br>
-                        <br>
-                        <p>Score: <span id="score">0</span> </p>
-                    </div>
-                    <br>
-                    <br>
-                    <br>
-                    <! -- here comes the grid -->
-                    <div id="grid-container">
-                        <div class="grid-cell" id="grid-0-0"></div>
-                        <div class="grid-cell" id="grid-0-1"></div>
-                        <div class="grid-cell" id="grid-0-2"></div>
-                        <div class="grid-cell" id="grid-0-3"></div>
-
-                        <div class="grid-cell" id="grid-1-0"></div>
-                        <div class="grid-cell" id="grid-1-1"></div>
-                        <div class="grid-cell" id="grid-1-2"></div>
-                        <div class="grid-cell" id="grid-1-3"></div>
-
-                        <div class="grid-cell" id="grid-2-0"></div>
-                        <div class="grid-cell" id="grid-2-1"></div>
-                        <div class="grid-cell" id="grid-2-2"></div>
-                        <div class="grid-cell" id="grid-2-3"></div>
-
-                        <div class="grid-cell" id="grid-3-0"></div>
-                        <div class="grid-cell" id="grid-3-1"></div>
-                        <div class="grid-cell" id="grid-3-2"></div>
-                        <div class="grid-cell" id="grid-3-3"></div>
-                        <!--
-                        <div class="number-cell" id="number-cell-0-0" style="width: 0px; height: 0px; top: 70px; left: 70px"></div>
-                        <div class="number-cell" id="number-cell-0-1" style="width: 0px; height: 0px; top: 70px; left: 190px"></div>
-                        <div class="number-cell" id="number-cell-0-2" style="width: 0px; height: 0px; top: 70px; left: 310px"></div>
-                        <div class="number-cell" id="number-cell-0-3" style="width: 0px; height: 0px; top: 70px; left: 430px"></div>
-                        <div class="number-cell" id="number-cell-1-0" style="width: 0px; height: 0px; top: 190px; left: 70px"></div>
-                        <div class="number-cell" id="number-cell-1-1" style="width: 0px; height: 0px; top: 190px; left: 190px"></div>
-                        <div class="number-cell" id="number-cell-1-2" style="width: 0px; height: 0px; top: 190px; left: 310px"></div>
-                        <div class="number-cell" id="number-cell-1-3" style="width: 0px; height: 0px; top: 190px; left: 430px"></div>
-                        <div class="number-cell" id="number-cell-2-0" style="width: 0px; height: 0px; top: 310px; left: 70px"></div>
-                        <div class="number-cell" id="number-cell-2-1" style="width: 0px; height: 0px; top: 310px; left: 190px"></div>
-                        <div class="number-cell" id="number-cell-2-2" style="width: 0px; height: 0px; top: 310px; left: 310px"></div>
-                        <div class="number-cell" id="number-cell-2-3" style="width: 0px; height: 0px; top: 310px; left: 430px"></div>
-                        <div class="number-cell" id="number-cell-3-0" style="width: 0px; height: 0px; top: 430px; left: 70px"></div>
-                        <div class="number-cell" id="number-cell-3-1" style="width: 0px; height: 0px; top: 430px; left: 190px"></div>
-                        <div class="number-cell" id="number-cell-3-2" style="width: 0px; height: 0px; top: 430px; left: 310px"></div>
-                        <div class="number-cell" id="number-cell-3-3" style="width: 0px; height: 0px; top: 430px; left: 430px"></div>
-                        -->
-                    </div>
-
                     <p class="game-explanation">
-                        <strong class="important">How to play:</strong> Use your <strong>"A","W","S","D" as arrow keys</strong> to move the tiles. <br>
+                        <strong class="important">How to play:</strong> Use your <strong>"A","W","S","D" or arrow keys</strong> to move the tiles. <br>
                         When two tiles with the same number touch, they <strong>merge into one!</strong> <br>
                         <br>
                         <br>
                         <strong class="important">Let the AI play:</strong> Click let the AI play, it would automatically play the game and normally
-                        end the game after getting 1024.<br>
+                        end the game after getting 2048.<br>
                     </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+                    <div class="container">
+                        <div class="heading">
+                            <h1 class="title" style="color:#776e65">2048</h1>
+                            <div class="scores-container">
+                                <div class="score-container" style="color:#8f7a66">0</div>
+                                <div class="best-container" style="color:#8f7a66">0</div>
+                            </div>
+                        </div>
+                    </div>
+
                     <br>
+                    <div class="row">
+                        <button class="btn btn-primary retry-button">New Game</button>
+                        <button class="btn btn-primary game-intro"
+                                onclick="run(true, true, false);">Let AI Play</button>
+                        <button class="btn btn-primary game-intro"
+                                onclick="run(true, true, true);">UltraFast AI Play</button>
+                        <button class="btn btn-primary game-intro"
+                                onclick="run(false, false, false);" disabled="true" id="stop">Pause</button>
+                    </div>
+
+                    <br>
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-2 text-center gtco-heading animate-box">
+                            <div class="game-container">
+                                <div class="game-message">
+                                    <p></p>
+                                    <div class="lower">
+                                        <a class="keep-playing-button">Keep going</a>
+                                        <a class="retry-button">Try again</a>
+                                    </div>
+                                </div>
+
+                                <div class="grid-container">
+                                    <div class="grid-row">
+                                        <div class="grid-cell"></div>
+                                        <div class="grid-cell"></div>
+                                        <div class="grid-cell"></div>
+                                        <div class="grid-cell"></div>
+                                    </div>
+                                    <div class="grid-row">
+                                        <div class="grid-cell"></div>
+                                        <div class="grid-cell"></div>
+                                        <div class="grid-cell"></div>
+                                        <div class="grid-cell"></div>
+                                    </div>
+                                    <div class="grid-row">
+                                        <div class="grid-cell"></div>
+                                        <div class="grid-cell"></div>
+                                        <div class="grid-cell"></div>
+                                        <div class="grid-cell"></div>
+                                    </div>
+                                    <div class="grid-row">
+                                        <div class="grid-cell"></div>
+                                        <div class="grid-cell"></div>
+                                        <div class="grid-cell"></div>
+                                        <div class="grid-cell"></div>
+                                    </div>
+                                </div>
+
+                                <div class="tile-container">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <p class="game-explanation text-center">
                         <strong class="important">A : move LEFT</strong><br>
                         <strong class="important">W : move UP</strong><br>
@@ -186,6 +199,10 @@
                         <strong class="important">D : move RIGHT</strong><br>
                     </p>
                 </div>
+            </div>
+            <div class="col-md-10 col-md-offset-1 text-center gtco-heading animate-box">
+                        <span class="btn btn-primary"
+                              onclick="window.location='projects.html'">Back to Projects</span>
             </div>
         </div>
     </div>
@@ -282,8 +299,56 @@
 
 
 <!-- import 2048 js file -->
-<script type="text/javascript" src="js/support.js"></script>
-<script type="text/javascript" src="js/game.js"></script>
+<script src="js/2048/animframe_polyfill.js"></script>
+<script src="js/2048/keyboard_input_manager.js"></script>
+<script src="js/2048/html_actuator.js"></script>
+<script src="js/2048/grid.js"></script>
+<script src="js/2048/tile.js"></script>
+<script src="js/2048/local_score_manager.js"></script>
+<script src="js/2048/game_manager.js"></script>
+<script src="js/2048/application.js"></script>
+<script src="js/2048/ai.js"></script>
+<script>
+    var ai = new AI();
+    var continuous = false;
+    var time_out = null;
+    var interval = 500;
+    var after_win = false;
+    function ai_run() {
+        time_out = null;
+        if (!global_game || global_game.over || (global_game.won && !after_win)) return;
+
+        for (var i = 0; i < 4; ++i) {
+            for (var j = 0; j < 4; ++j) {
+                var t = global_game.grid.cells[i][j];
+                if (t) {
+                    ai.SetTile(i, j, t.value);
+                } else {
+                    ai.SetTile(i, j, 0);
+                }
+            }
+        }
+        var dir = [3, 2, 1, 0]
+        ai.StartSearch();
+        global_game.move(dir[ai.best_operation]);
+        if (continuous) {
+            if (time_out == null) {
+                time_out = window.setTimeout("ai_run()", interval);
+            }
+        }
+    }
+    function run(is_continuous, need_run, is_crazy) {
+        continuous = is_continuous;
+        document.getElementById("stop").disabled = !continuous;
+        interval = is_crazy ? 0 : 500;
+        if (need_run) {
+            if (global_game && global_game.won) {
+                after_win = true;
+            }
+            ai_run();
+        }
+    }
+</script>
 
 </body>
 </html>

@@ -430,7 +430,7 @@ function init() {
 	new TypeWriter(txtElement, words, wait);
 }
 
-
+/*
 // Code for 2048
 // add one line in the main function newgame
 var gameBoard =  Array();
@@ -445,6 +445,7 @@ var endy = 0;
 $(document).ready(function(){
 	//prepareForMobile();
 	newgame();
+	//auto_play();
 });
 
 function prepareForMobile(){
@@ -517,31 +518,27 @@ function updateGameView(){
 	}
 
 	$('.number-cell').css('line-height', 100+'px');
-	$('.number-cell').css('font-size', 50+'px');
+	$('.number-cell').css('font-size', 60+'px');
 }
 
-function generateOneNum(){
-	if(nospace(gameBoard)){
-		return false;
-	}
+/*
+function auto_play(){
 
-	var randX = parseInt(Math.floor(Math.random()*4));
-	var randY = parseInt(Math.floor(Math.random()*4));
+	//console.log("into the auto_play");
+	newgame();
 	while(true){
-		if(gameBoard[randX][randY] == 0){
+		console.log(isGameOver());
+		if( !isGameOver()){
+			//movedirection(compute_direction(gameBoard));
+			generateOneNum();
+			console.log("after move left");
+
+		} else{
+			console.log("break");
 			break;
 		}
-		else {
-			randX = parseInt(Math.floor(Math.random() * 4));
-			randY = parseInt(Math.floor(Math.random() * 4));
-		}
+		//break;
 	}
-
-	var randNumber = Math.random() <0.5 ? 2 : 4;
-
-	gameBoard[randX][randY] = randNumber;
-
-	showNum(randX, randY, randNumber);
-
-	return true;
+	console.log("end game");
 }
+*/

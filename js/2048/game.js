@@ -91,7 +91,9 @@ document.addEventListener('touchend',function(event){
 function isGameOver(){
     if(nospace(gameBoard) && nomove(gameBoard)){
         gameOver();
+        return true;
     }
+    return false;
 }
 
 function gameOver(){
@@ -99,6 +101,7 @@ function gameOver(){
 }
 
 function moveleft(){
+    //console.log("inside loop");
     if(! canMoveLeft(gameBoard)){
         return false;
     }
@@ -224,5 +227,31 @@ function moveDown(){
         }
     }
     setTimeout("updateGameView()",200);
+    return true;
+}
+
+function generateOneNum(){
+    if(nospace(gameBoard)){
+        return false;
+    }
+
+    var randX = parseInt(Math.floor(Math.random()*4));
+    var randY = parseInt(Math.floor(Math.random()*4));
+    while(true){
+        if(gameBoard[randX][randY] == 0){
+            break;
+        }
+        else {
+            randX = parseInt(Math.floor(Math.random() * 4));
+            randY = parseInt(Math.floor(Math.random() * 4));
+        }
+    }
+
+    var randNumber = Math.random() <0.5 ? 2 : 4;
+
+    gameBoard[randX][randY] = randNumber;
+
+    showNum(randX, randY, randNumber);
+
     return true;
 }
