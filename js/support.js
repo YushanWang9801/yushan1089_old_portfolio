@@ -97,7 +97,7 @@ function canMoveRight(gameBoard){
 
 function canMoveUp(gameBoard){
     for(var j=0; j< 4; j++){
-        for(var i = 1; j < 4 ; i++){
+        for(var i = 1; i < 4 ; i++){
 
             if(gameBoard[i][j] != 0){
                 if (gameBoard[i - 1][j] == 0 || gameBoard[i - 1][j] == gameBoard[i][j]){
