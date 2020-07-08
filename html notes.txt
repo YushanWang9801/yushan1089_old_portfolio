@@ -15,7 +15,6 @@ taiwan	photo
 Project
 
 2048	project
-bar	project
 dsc	project
 face	project
 FIS 	project
@@ -24,6 +23,9 @@ mach	project
 self_driving cars
 	find_lanes
 
+Fun Project
+bar	fun
+shunji	fun
 
 
 Main Page
