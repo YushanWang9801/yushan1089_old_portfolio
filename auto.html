@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Yushan's photo - Baltimore</title>
+    <title>Yushan's Auto Driving</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Yushan's portfolio" />
     <meta name="keywords" content="yushan, wang, programming, machine learning" />
@@ -65,20 +65,29 @@
 
             <div class="row">
                 <div class="col-sm-4 col-xs-12">
-                    <div id="gtco-logo"><a href="photos.html"> Yushan Photos<em>.</em></a></div>
+                    <div id="gtco-logo"><a href="index.html">Yushan Wang <em>.</em></a></div>
                 </div>
                 <div class="col-xs-8 text-right menu-1">
                     <ul>
-                        <li><a href="About.html">About</a></li>
+                        <li ><a href="About.html">About</a></li>
+                        <li class="has-dropdown active">
+                            <a href="projects.html">Projects</a>
+                            <ul class="dropdown">
+                                <li><a href="face.html">Face Mask Detector</a></li>
+                                <li><a href="mach.html">Machine Learning</a></li>
+                                <li><a href="dsc.html">Data Science</a></li>
+                                <li><a href="FIS.html">F1 In Schools</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="photos.html">Photos</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                    </ul>
                 </div>
             </div>
 
         </div>
     </nav>
-    <header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(images/balt/4.jpg);background-size: cover;
-  background-position: center center; ">
+
+    <header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(images/auto/main_cover3.gif)">
         <div class="overlay"></div>
         <div class="gtco-container">
             <div class="row">
@@ -86,79 +95,29 @@
                     <div class="row row-mt-15em">
 
                         <div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
-                            <h1>Baltimore</h1>
+                            <h1>Self Driving Car</h1>
+                            <h2>Here is a full list of autonomous car related project</h2>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </div>
     </header>
+
+
     <div class="gtco-section">
         <div class="gtco-container">
             <div class="row">
-
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="images/balt/4.jpg" class="fh5co-card-item image-popup">
-                        <figure>
-                            <div class="overlay"><i class="ti-plus"></i></div>
-                            <img src="images/balt/443.jpg" alt="Image" class="img-responsive">
-                        </figure>
-                    </a>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="images/balt/1.jpg" class="fh5co-card-item image-popup">
-                        <figure>
-                            <div class="overlay"><i class="ti-plus"></i></div>
-                            <img src="images/balt/143.jpg" alt="Image" class="img-responsive">
-                        </figure>
-                    </a>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="images/balt/2.jpg" class="fh5co-card-item image-popup">
-                        <figure>
-                            <div class="overlay"><i class="ti-plus"></i></div>
-                            <img src="images/balt/243.jpg" alt="Image" class="img-responsive">
-                        </figure>
-                    </a>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="images/balt/3.jpg" class="fh5co-card-item image-popup">
-                        <figure>
-                            <div class="overlay"><i class="ti-plus"></i></div>
-                            <img src="images/balt/343.jpg" alt="Image" class="img-responsive">
-                        </figure>
-                    </a>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="images/balt/5.jpg" class="fh5co-card-item image-popup">
-                        <figure>
-                            <div class="overlay"><i class="ti-plus"></i></div>
-                            <img src="images/balt/543.jpg" alt="Image" class="img-responsive">
-                        </figure>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="images/balt/6.jpg" class="fh5co-card-item image-popup">
-                        <figure>
-                            <div class="overlay"><i class="ti-plus"></i></div>
-                            <img src="images/balt/643.jpg" alt="Image" class="img-responsive">
-                        </figure>
-                    </a>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="images/balt/7.jpg" class="fh5co-card-item image-popup">
-                        <figure>
-                            <div class="overlay"><i class="ti-plus"></i></div>
-                            <img src="images/balt/743.jpg" alt="Image" class="img-responsive">
-                        </figure>
-                    </a>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 animate-box">
+                        <p><a onclick="window.location='lane.html'">
+                            <img src="images/auto/lane/cover.gif" class="img-responsive" width=600>
+                        </a></p>
+                    </div>
+                    <div class="col-lg-6 col-md-6  animate-box text-left">
+                        <h1>Basic Lane Detection</h1>
+                        <h3>Using OpenCV</h3><br>
+                    </div>
                 </div>
             </div>
         </div>
@@ -255,3 +214,5 @@
 <script src="js/main.js"></script>
 
 </body>
+</html>
+
