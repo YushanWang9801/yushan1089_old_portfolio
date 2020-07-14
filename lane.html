@@ -108,17 +108,57 @@
     <div class="gtco-section">
         <div class="gtco-container">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-justify gtco-heading animate-box">
+                <div class="col-md-10 col-md-offset-1 text-center gtco-heading animate-box">
                     <h2>ABSTRACT</h2>
                     <p>Many has done this basic lane detection, this is the start project for self-driving car.
                         This would find lanes on the test_image and test_video and marked the lanes on to the image
                     and the video. </P>
-                <br>
-                <br>
-                <br>
+                    <h2> Study Steps</h2>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <h3>1. Load road image</h3>
+                            <img src="images/auto/lane/test_image.jpg" alt="Image" class="img-responsive">
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <h3>2. Convert to GrayScale</h3>
+                            <img src="images/auto/lane/gray.jpg" alt="Image" class="img-responsive">
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <h3>3. Apply Gaussian Blur</h3>
+                            <img src="images/auto/lane/blur.jpg" alt="Image" class="img-responsive">
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <h3>4. Apply Canny Edge Detection Operator</h3>
+                            <img src="images/auto/lane/canny.jpg" alt="Image" class="img-responsive">
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <h3>5. apply bitwise on Region Of Interest to extract lines</h3>
+                            <img src="images/auto/lane/masked.jpg" alt="Image" class="img-responsive">
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <h3>6. marked the line on the image</h3>
+                            <img src="images/auto/lane/opt_result.jpg" alt="Image" class="img-responsive">
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <h2> Video demonstration </h2>
+                    <br>
+                    <div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
+                        <img src="images/auto/lane/video.gif" alt="Image" class="img-responsive">
+                    </div>
+                </div>
                 <div class="col-md-10 col-md-offset-1 text-center gtco-heading animate-box">
                         <span class="btn btn-primary"
-                              onclick="window.location='projects.html'">Back to Projects</span>
+                              onclick="window.location='https://github.com/YushanWang9801/basic_lane_detection'">Link to the code</span>
+                        <span class="btn btn-primary"
+                            onclick="window.location='projects.html'">Back to Projects</span>
                 </div>
             </div>
         </div>
