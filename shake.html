@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Yushan's photo - Atlanta</title>
+    <title>Yushan's generating shakespare text with RNN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Yushan's portfolio" />
     <meta name="keywords" content="yushan, wang, programming, machine learning" />
@@ -65,11 +65,21 @@
 
             <div class="row">
                 <div class="col-sm-4 col-xs-12">
-                    <div id="gtco-logo"><a href="photos.html"> Yushan Photos<em>.</em></a></div>
+                    <div id="gtco-logo"><a href="index.html">Yushan Wang <em>.</em></a></div>
                 </div>
                 <div class="col-xs-8 text-right menu-1">
                     <ul>
-                        <li><a href="About.html">About</a></li>
+                        <li ><a href="About.html">About</a></li>
+                        <li class="has-dropdown active">
+                            <a href="projects.html">Projects</a>
+                            <ul class="dropdown">
+                                <li><a href="face.html">Face Mask Detector</a></li>
+                                <li><a href="mach.html">Machine Learning</a></li>
+                                <li><a href="dsc.html">Data Science</a></li>
+                                <li><a href="FIS.html">F1 In Schools</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="photos.html">Photos</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
@@ -77,8 +87,8 @@
 
         </div>
     </nav>
-    <header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(images/atl/1.jpg);background-size: cover;
-  background-position: center center; ">
+
+    <header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(images/shake/shake.jpg); background-size:cover">
         <div class="overlay"></div>
         <div class="gtco-container">
             <div class="row">
@@ -86,76 +96,48 @@
                     <div class="row row-mt-15em">
 
                         <div class="col-md-12 mt-text animate-box" data-animate-effect="fadeInUp">
-                            <h1>Atlanta</h1>
+                            <h1>Geneating Shakespare's themed Text under 20 minutes with RNN</h1>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </div>
     </header>
+
+
     <div class="gtco-section">
         <div class="gtco-container">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-                    <h3>The fall of Cherry Flower, The fabulous of Season of Falling in Love</h3>
-                    <p></p>
-                </div>
-            </div>
-            <div class="row">
+                <div class="col-md-10 col-md-offset-1 text-justify gtco-heading animate-box">
+                    <h2>ABSTRACT</h2>
+                    <p>We will use a Recurrent Neural Network model to train shakespare text and using very limited
+                        training time to have a generator to generate shakespare themed text. As we all know that
+                        RNN has been incredibly useful in training sequential data. Then in this project, I will use LSTM
+                        (Long-Short-Term Memory) Neural Network. </p>
+                    <h2>Introduction to LSTM Neural Network</h2>
+                    <p>Long Short Term Memory networks – usually just called “LSTMs” – are a special kind of RNN,
+                        capable of learning long-term dependencies. They were introduced by Hochreiter & Schmidhuber (1997),
+                        and were refined and popularized by many people in following work.1 They work tremendously well on a
+                        large variety of problems, and are now widely used.</p>
+                    <img src="images/shake/LSTM3-chain.png" width=800 style="position: center">
+                    
 
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="images/atl/1.jpg" class="fh5co-card-item image-popup">
-                        <figure>
-                            <div class="overlay"><i class="ti-plus"></i></div>
-                            <img src="images/atl/143.jpg" alt="Image" class="img-responsive">
-                        </figure>
-                    </a>
-                </div>
 
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="images/atl/2.jpg" class="fh5co-card-item image-popup">
-                        <figure>
-                            <div class="overlay"><i class="ti-plus"></i></div>
-                            <img src="images/atl/243.jpg" alt="Image" class="img-responsive">
-                        </figure>
-                    </a>
-                </div>
+                    <h2>Related Work</h2>
+                    <p>Understanding LSTM Networks<br><br>
+                        https://colah.github.io/posts/2015-08-Understanding-LSTMs</p>
+                    <p> GENERATING TEXTS WITH RECURRENT NEURAL NETWORKS IN PYTHON<br><br>
+                        https://www.neuralnine.com/generating-texts-with-recurrent-neural-networks-in-python</p>
+                    <p>Generation of poems with a recurrent neural network<br><br>
+                        https://medium.com/@DenisKrivitski/generation-of-poems-with-a-recurrent-neural-network-128a5f62b483</p>
 
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="images/atl/3.jpg" class="fh5co-card-item image-popup">
-                        <figure>
-                            <div class="overlay"><i class="ti-plus"></i></div>
-                            <img src="images/atl/343.jpg" alt="Image" class="img-responsive">
-                        </figure>
-                    </a>
-                </div>
 
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="images/atl/4.jpg" class="fh5co-card-item image-popup">
-                        <figure>
-                            <div class="overlay"><i class="ti-plus"></i></div>
-                            <img src="images/atl/443.jpg" alt="Image" class="img-responsive">
-                        </figure>
-                    </a>
                 </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="images/atl/5.jpg" class="fh5co-card-item image-popup">
-                        <figure>
-                            <div class="overlay"><i class="ti-plus"></i></div>
-                            <img src="images/atl/543.jpg" alt="Image" class="img-responsive">
-                        </figure>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="images/atl/6.jpg" class="fh5co-card-item image-popup">
-                        <figure>
-                            <div class="overlay"><i class="ti-plus"></i></div>
-                            <img src="images/atl/643.jpg" alt="Image" class="img-responsive">
-                        </figure>
-                    </a>
+                <div class="col-md-10 col-md-offset-1 text-center gtco-heading animate-box">
+                        <span class="btn btn-primary"
+                              onclick="window.location='https://github.com/YushanWang9801/basic_lane_detection'">Link to the code</span>
+                    <span class="btn btn-primary"
+                          onclick="window.location='projects.html'">Back to Projects</span>
                 </div>
             </div>
         </div>
@@ -252,3 +234,5 @@
 <script src="js/main.js"></script>
 
 </body>
+</html>
+
