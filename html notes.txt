@@ -1,33 +1,3 @@
-Photo
-
-798	photo
-atl	photo
-balt	photo
-chicago photo
-edin	photo
-fos	photo
-nagoya	photo
-santa	photo
-sf	photo
-taiwan	photo
-
-
-Project
-
-2048	project
-dsc	project
-face	project
-FIS 	project
-mach	project
-
-self_driving cars
-	find_lanes
-
-Fun Project
-bar	fun
-shunji	fun
-
-
 Main Page
 
 index
@@ -35,3 +5,32 @@ About
 contact
 projects
 photos
+
+Photo
+
+798		photo
+atl		photo
+balt	photo
+chicago photo
+edin	photo
+fos		photo
+nagoya	photo
+santa	photo
+sf		photo
+taiwan	photo
+
+
+Project
+
+2048	project
+dsc		project
+face	project
+FIS 	project
+mach	project
+
+self_driving cars
+		find_lanes
+
+Fun 	Project
+bar		fun
+shunji	fun
